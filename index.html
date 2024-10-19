@@ -500,10 +500,10 @@
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
+        <p class="contact-form-title">
+          Leave your contacts and we will call you back
+        </p>
         <form name="contact_form" class="contact-form form">
-          <p class="contact-form-title">
-            Leave your contacts and we will call you back
-          </p>
           <div class="form-field">
             <label for="user-name" class="form-label">Name</label>
             <div class="form-input-wrapper">
@@ -533,11 +533,11 @@
             </div>
           </div>
           <div class="form-field">
-            <label for="user-email" class="form-label">Email</label>
+            <label for="user-mail" class="form-label">Email</label>
             <div class="form-input-wrapper">
               <input
-                id="user-email"
-                name="user-email"
+                id="user-mail"
+                name="email"
                 type="email"
                 class="form-input"
               />
@@ -550,7 +550,6 @@
             <label for="message" class="form-label">Comment</label>
             <textarea
               id="message"
-              type="text"
               class="form-input"
               placeholder="Text input"
               rows="3"
@@ -569,10 +568,8 @@
                   <use href="./images/icons.svg#icon-checkbox"></use>
                 </svg>
               </span>
-              <p>
-                I accept the terms and conditions of the
-                <a href="" class="link">Privacy Policy</a>
-              </p>
+              I accept the terms and conditions of the
+              <a href="" class="link"> Privacy Policy</a>
             </label>
           </div>
           <button type="submit" class="contact-form-button button">Send</button>

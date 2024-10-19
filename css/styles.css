@@ -554,26 +554,32 @@ textarea:focus,
   flex-direction: column;
   gap: 16px;
 }
-.footer .footer-subscribe input {
+.footer .footer-subscribe .form-input {
   border: 1px solid #ffffff;
   background-color: transparent;
   color: #ffffff;
+  width: 264px;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.footer .footer-subscribe input:focus,
-.footer .footer-subscribe input:focus-visible {
+.footer .footer-subscribe .form-input:focus,
+.footer .footer-subscribe .form-input:focus-visible {
   border: 1px solid #4d5ae5;
 }
-.footer .footer-subscribe input::placeholder {
+.footer .footer-subscribe .form-input::placeholder {
   color: #ffffff;
 }
 .footer .footer-subscribe-button {
   padding: 8px 24px;
   display: flex;
-  gap: 16px;
+  min-width: 165px;
+  justify-content: center;
+  align-items: center;
 }
 .footer .footer-subscribe .icon {
   display: inline-block;
   fill: #f4f4fd;
+  margin-left: 16px;
 }
 
 /* Modal */
@@ -598,12 +604,12 @@ textarea:focus,
 }
 .modal {
   position: absolute;
+  background: #fcfcfc;
   width: 408px;
   min-height: 584px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
   padding: 24px;
   padding-top: 72px;
   border-radius: 4px;
@@ -667,12 +673,14 @@ textarea:focus,
 }
 .modal .modal-button svg {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal .modal-button:hover {
   background-color: #404bbf;
   border: none;
 }
-.modal .modal-button:hover svg {
+.modal .modal-button:hover svg,
+.modal .modal-button:focus svg {
   fill: #ffffff;
 }
 .modal .form-field-checkbox span {
@@ -684,6 +692,7 @@ textarea:focus,
   position: relative;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
 }
 .modal .form-field-checkbox span .icon {
   position: absolute;
@@ -698,12 +707,12 @@ textarea:focus,
 .modal .form-field-checkbox .form-label {
   display: flex;
   align-items: center;
-  gap: 8px;
   margin-bottom: 24px;
 }
 .modal .form-field-checkbox .form-label .link {
   text-decoration: underline;
   color: #4d5ae5;
+  margin-left: 4px;
 }
 .modal .form-field-checkbox .form-input:checked + .form-label span {
   background-color: #404bbf;
@@ -718,4 +727,11 @@ textarea:focus,
   margin: 0 auto;
   padding: 16px 32px;
   min-width: 169px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal .contact-form-button:hover,
+.modal .contact-form-button:focus {
+  background-color: #404bbf;
+  border: none;
 }
